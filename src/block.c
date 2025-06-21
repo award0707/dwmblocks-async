@@ -127,6 +127,7 @@ int block_update(block *const block) {
     // Collect exit-status of the subprocess to avoid zombification.
     int fork_status = 0;
     if (waitpid(block->fork_pid, &fork_status, 0) == -1) {
+	perror("waitpid() in block_update");
         (void)fprintf(stderr,
                       "error: could not obtain exit status for \"%s\" block\n",
                       block->command);

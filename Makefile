@@ -1,6 +1,6 @@
 .POSIX:
 
-BIN := dwmblocks
+BIN := dwmblocks_focus
 BUILD_DIR := build
 SRC_DIR := src
 INC_DIR := include
